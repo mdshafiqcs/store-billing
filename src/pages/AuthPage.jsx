@@ -16,6 +16,7 @@ export default function AuthPage() {
   const {mutate: submitForm, isPending: isLoading} = useMutation({
     mutationFn: authPage ==="login" ?  AuthService.login : AuthService.register,
     onSuccess: (data) => {
+      toast.success(data.message, {type:"success"});
       dispatch(storeLogin(data.data.user));
     },
     onError: (error) => {
@@ -30,8 +31,6 @@ export default function AuthPage() {
       password: '',
     },
   });
-
-  
 
   const onSubmit = handleSubmit(async(data) => {
     submitForm(data);
