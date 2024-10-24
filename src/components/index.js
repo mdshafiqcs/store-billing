@@ -1,10 +1,12 @@
-import Navbar from "./Navbar";
+import DashboardNavbar from "./DashboardNavbar";
+import HomeNavbar from "./HomeNavbar";
 import Sidebar from "./Sidebar";
 import LogoutButton from "./LogoutButton";
 
 
 export {
-  Navbar,
+  DashboardNavbar,
+  HomeNavbar,
   LogoutButton,
   Sidebar,
 }
