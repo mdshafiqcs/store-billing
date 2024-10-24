@@ -1,5 +1,8 @@
 import React from 'react'
 import { Navbar, Sidebar } from '../components'
+import { Routes } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import DashboardPage from './DashboardPage'
 
 export default function HomePage() {
   return (
@@ -7,7 +10,11 @@ export default function HomePage() {
       <Navbar />
       <div className='flex gap-2'>
         <Sidebar />
-        <h1>HomePage</h1>
+        <Routes>
+          <Route path='/' element={<DashboardPage />}>
+          
+          </Route>
+        </Routes>
       </div>
     </div>
   )
